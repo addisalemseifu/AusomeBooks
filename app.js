@@ -15,6 +15,9 @@ add_btn.addEventListener('click', (e)=>{
         const MyListTwo = document.createElement('li');
         const Mybutton = document.createElement('button');
         Mybutton.classList = "remove_btn";
+        Mybutton.setAttribute("id",Math.random().toString(16).slice(2));
+        Mybutton.setAttribute("onclick","remoteAt(this.id)");
+
         MyList.innerHTML = book_input.value;
         MyListTwo.innerHTML = book_input_one.value;
         Mybutton.innerHTML = "Remove";
@@ -37,15 +40,17 @@ add_btn.addEventListener('click', (e)=>{
     for(let i = 0; i < remove.length; i++){
         
 
-        remove[i].addEventListener('click', ()=> {
-            // bookArray.splice(bookArray[i],1);
-            bookArray.splice(i,1);
-            remove[i].parentElement.style.display = "none";
-            // var removed = bookArray[i];
-            // delete object;
-            console.log(bookArray);
-            console.log(object);
-        })
+   
     }
 })
-console.log(object);
+
+function remoteAt(id)
+{    
+    const element = document.getElementById(id);
+     const index = bookArray.findIndex(prop => prop.id === id)
+     bookArray.splice(index, 1)
+     element.parentElement.style.display = "none";
+     console.log(bookArray);
+
+    
+}
