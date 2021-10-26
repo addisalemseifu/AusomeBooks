@@ -1,4 +1,3 @@
-
 var object = {};
 var bookArray = [];
 const book_input = document.querySelector('#txt');
@@ -17,7 +16,6 @@ add_btn.addEventListener('click', (e)=>{
         Mybutton.classList = "remove_btn";
         Mybutton.setAttribute("id",Math.random().toString(16).slice(2));
         Mybutton.setAttribute("onclick","remoteAt(this.id)");
-
         MyList.innerHTML = book_input.value;
         MyListTwo.innerHTML = book_input_one.value;
         Mybutton.innerHTML = "Remove";
@@ -37,11 +35,6 @@ add_btn.addEventListener('click', (e)=>{
     console.log(object);
     console.log(bookArray);
     const remove = document.querySelectorAll('.remove_btn');
-    for(let i = 0; i < remove.length; i++){
-        
-
-   
-    }
 })
 
 function remoteAt(id)
@@ -50,7 +43,4 @@ function remoteAt(id)
      const index = bookArray.findIndex(prop => prop.id === id)
      bookArray.splice(index, 1)
      element.parentElement.style.display = "none";
-     console.log(bookArray);
-
-    
 }
