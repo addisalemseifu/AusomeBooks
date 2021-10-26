@@ -24,8 +24,8 @@ add_btn.addEventListener('click', (e)=>{
         book_list.appendChild(MyBooks);
         var input = book_input.value;
         object[input] = book_input_one.value;
-        localStorage.setItem("bookArray", JSON.stringify(bookArray));
         bookArray.push(object);
+        localStorage.setItem("bookArray", JSON.stringify(bookArray));
         console.log(object);
         console.log(bookArray);
         book_input.value = "";
