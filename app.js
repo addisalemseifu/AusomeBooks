@@ -24,6 +24,7 @@ add_btn.addEventListener('click', (e)=>{
         book_list.appendChild(MyBooks);
         var input = book_input.value;
         object[input] = book_input_one.value;
+        localStorage.setItem("bookArray", JSON.stringify(bookArray));
         bookArray.push(object);
         console.log(object);
         console.log(bookArray);
@@ -34,11 +35,14 @@ add_btn.addEventListener('click', (e)=>{
     console.log(bookArray);
     const remove = document.querySelectorAll('.remove_btn');
     for(let i = 0; i < remove.length; i++){
+        
+
         remove[i].addEventListener('click', ()=> {
+            // bookArray.splice(bookArray[i],1);
+            bookArray.splice(i,1);
             remove[i].parentElement.style.display = "none";
-            var removed = bookArray[i];
-            delete object;
-            bookArray.splice(i, 1);
+            // var removed = bookArray[i];
+            // delete object;
             console.log(bookArray);
             console.log(object);
         })
