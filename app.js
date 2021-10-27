@@ -4,12 +4,8 @@ const bookInput = document.querySelector('#txt');
 const bookInputOne = document.querySelector('#txtOne');
 const addBtn = document.querySelector('.add');
 const bookList = document.querySelector('.book-list');
-function remoteAt(id) {
-  const element = document.getElementById(id);
-  const index = bookArray.findIndex((prop) => prop.id === id);
-  bookArray.splice(index, 1);
-  element.parentElement.style.display = 'none';
-}
+const id = null;
+
 addBtn.addEventListener('click', (e) => {
   object = {};
   if (bookInput.value !== '') {
@@ -21,7 +17,7 @@ addBtn.addEventListener('click', (e) => {
     const Mybutton = document.createElement('button');
     Mybutton.classList = 'remove_btn';
     Mybutton.setAttribute('id', Math.random().toString(16).slice(2));
-    Mybutton.setAttribute('onclick', 'remoteAt(this.id)');
+    Mybutton.setAttribute('onclick', `${'remoteAt(this.id)'}`);
     MyList.innerHTML = bookInput.value;
     MyListTwo.innerHTML = bookInputOne.value;
     Mybutton.innerHTML = 'Remove';
@@ -39,4 +35,10 @@ addBtn.addEventListener('click', (e) => {
     bookInputOne.value = '';
   }
 });
-remoteAt();
+function remoteAt(id) {
+  const element = document.getElementById(id);
+  const index = bookArray.findIndex((prop) => prop.id === id);
+  bookArray.splice(index, 1);
+  element.parentElement.style.display = 'none';
+}
+remoteAt(id);
