@@ -10,6 +10,7 @@ class Books {
     this.booksAu = booksAu;
     this.id = id;
   }
+
   static display() {
     bookList.innerHTML = '';
     bookArray.forEach((element) => {
