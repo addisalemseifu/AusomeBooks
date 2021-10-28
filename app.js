@@ -21,7 +21,7 @@ class Books {
       Mybutton.classList = 'remove_btn';
       Mybutton.setAttribute('id', element.id);
       Mybutton.setAttribute('onclick', `${'Books.remoteAt(this.id)'}`);
-      MyList.innerHTML = `\''${element.booksName}\'' by`;
+      MyList.innerHTML = `'${element.booksName}' by`;
       MyListTwo.innerHTML = element.booksAu;
       Mybutton.innerHTML = 'Remove';
       MyBooks.appendChild(MyList);
@@ -34,6 +34,7 @@ class Books {
     localStorage.clear();
     localStorage.setItem('bookArray', JSON.stringify(bookArray));
   }
+
   static remoteAt(id) {
     const element = document.getElementById(id);
     const index = bookArray.findIndex((prop) => prop.id === id);
