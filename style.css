@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.7rem;
+  font-family: monospace;
+  font-weight: 800;
+}
+
+ul {
+  display: inline-block;
+  border-bottom: 1px solid rgb(190, 182, 182);
+}
+
+li {
+  display: inline-block;
+  margin-left: 0.3rem;
+}
+
+.remove_btn {
+  float: right;
+  left: 35rem;
+  display: inline-block;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  align-content: center;
+  justify-content: center;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  width: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12rem;
+  margin: auto;
+  height: 10rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  margin-bottom: 0.7rem;
+  font-family: monospace;
+  font-weight: 800;
+}
+
+#txt {
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 2px;
+}
+
+#txtOne {
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 2px;
+  margin-top: -25px;
+}
+
+.add {
+  border: 1px solid black;
+  margin-right: 0;
+  margin-left: auto;
+  width: 3rem;
+  border-radius: 2px;
+  margin-top: -25px;
+}
