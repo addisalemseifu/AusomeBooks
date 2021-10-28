@@ -1,5 +1,3 @@
-// const object = {};
-
 const id = null;
 const bookInput = document.querySelector('#txt');
 const bookInputOne = document.querySelector('#txtOne');
@@ -7,11 +5,12 @@ const addBtn = document.querySelector('.add');
 const bookList = document.querySelector('.book-list');
 let bookArray = JSON.parse(localStorage.getItem('bookArray'));
 class Books {
-  constructor(id, booksName, booksAu){
-      this.booksName = booksName;
-      this.booksAu = booksAu;
-      this.id = id;
+  constructor(id, booksName, booksAu) {
+    this.booksName = booksName;
+    this.booksAu = booksAu;
+    this.id = id;
   }
+
   static display() {
     bookList.innerHTML = '';
     bookArray.forEach((element) => {
@@ -21,8 +20,8 @@ class Books {
       const Mybutton = document.createElement('button');
       Mybutton.classList = 'remove_btn';
       Mybutton.setAttribute('id', element.id);
-      Mybutton.setAttribute('onclick', `${'remoteAt(this.id)'}`);
-      MyList.innerHTML = element.booksName;
+      Mybutton.setAttribute('onclick', `${'Books.remoteAt(this.id)'}`);
+      MyList.innerHTML = `\''${element.booksName}\'' by`;
       MyListTwo.innerHTML = element.booksAu;
       Mybutton.innerHTML = 'Remove';
       MyBooks.appendChild(MyList);
@@ -35,39 +34,30 @@ class Books {
     localStorage.clear();
     localStorage.setItem('bookArray', JSON.stringify(bookArray));
   }
-  
+
+  static remoteAt(id) {
+    const element = document.getElementById(id);
+    const index = bookArray.findIndex((prop) => prop.id === id);
+    bookArray.splice(index, 1);
+    element.parentElement.style.display = 'none';
+    Books.display();
+  }
 }
 if (bookArray == null) {
   bookArray = [];
 }
 
-
-
 addBtn.addEventListener('click', (e) => {
   if (bookInput.value !== '') {
     e.preventDefault();
-    // create li
-    // var input = bookInput.value;
-    const object = new Books(Math.random().toString(16).slice(2), bookInput.value, bookInputOne.value);
-    // const object = {
-    //   id: Math.random().toString(16).slice(2),
-    //   booksName: bookInput.value,
-    //   booksAu: bookInputOne.value,
-    // };
+    const object = new Books(Math.random().toString(16).slice(2),
+      bookInput.value, bookInputOne.value);
     bookArray.push(object);
     Books.display();
   }
 });
 
-function remoteAt(id) {
-  const element = document.getElementById(id);
-  const index = bookArray.findIndex((prop) => prop.id === id);
-  bookArray.splice(index, 1);
-  element.parentElement.style.display = 'none';
-  Books.display();
-}
-
 window.addEventListener('load', () => {
   Books.display();
-  remoteAt(id);
+  Books.remoteAt(id);
 });
