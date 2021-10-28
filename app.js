@@ -10,7 +10,6 @@ class Books {
     this.booksAu = booksAu;
     this.id = id;
   }
-
   static display() {
     bookList.innerHTML = '';
     bookArray.forEach((element) => {
@@ -34,7 +33,6 @@ class Books {
     localStorage.clear();
     localStorage.setItem('bookArray', JSON.stringify(bookArray));
   }
-
   static remoteAt(id) {
     const element = document.getElementById(id);
     const index = bookArray.findIndex((prop) => prop.id === id);
@@ -46,7 +44,6 @@ class Books {
 if (bookArray == null) {
   bookArray = [];
 }
-
 addBtn.addEventListener('click', (e) => {
   if (bookInput.value !== '') {
     e.preventDefault();
@@ -56,7 +53,6 @@ addBtn.addEventListener('click', (e) => {
     Books.display();
   }
 });
-
 window.addEventListener('load', () => {
   Books.display();
   Books.remoteAt(id);
