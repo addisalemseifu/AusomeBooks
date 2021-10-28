@@ -1,5 +1,3 @@
-// const object = {};
-
 const id = null;
 const bookInput = document.querySelector('#txt');
 const bookInputOne = document.querySelector('#txtOne');
@@ -45,14 +43,8 @@ addBtn.addEventListener('click', (e) => {
   if (bookInput.value !== '') {
     e.preventDefault();
     // create li
-    // var input = bookInput.value;
     const object = new Books(Math.random().toString(16).slice(2),
       bookInput.value, bookInputOne.value);
-    // const object = {
-    //   id: Math.random().toString(16).slice(2),
-    //   booksName: bookInput.value,
-    //   booksAu: bookInputOne.value,
-    // };
     bookArray.push(object);
     Books.display();
   }
