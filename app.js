@@ -7,11 +7,12 @@ const addBtn = document.querySelector('.add');
 const bookList = document.querySelector('.book-list');
 let bookArray = JSON.parse(localStorage.getItem('bookArray'));
 class Books {
-  constructor(id, booksName, booksAu){
-      this.booksName = booksName;
-      this.booksAu = booksAu;
-      this.id = id;
+  constructor(id, booksName, booksAu) {
+    this.booksName = booksName;
+    this.booksAu = booksAu;
+    this.id = id;
   }
+
   static display() {
     bookList.innerHTML = '';
     bookArray.forEach((element) => {
@@ -35,20 +36,18 @@ class Books {
     localStorage.clear();
     localStorage.setItem('bookArray', JSON.stringify(bookArray));
   }
-  
 }
 if (bookArray == null) {
   bookArray = [];
 }
-
-
 
 addBtn.addEventListener('click', (e) => {
   if (bookInput.value !== '') {
     e.preventDefault();
     // create li
     // var input = bookInput.value;
-    const object = new Books(Math.random().toString(16).slice(2), bookInput.value, bookInputOne.value);
+    const object = new Books(Math.random().toString(16).slice(2),
+      bookInput.value, bookInputOne.value);
     // const object = {
     //   id: Math.random().toString(16).slice(2),
     //   booksName: bookInput.value,
