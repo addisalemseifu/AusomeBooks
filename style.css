@@ -39,22 +39,6 @@ span {
   margin-right: 2rem;
 }
 
-<<<<<<< HEAD
-=======
-.menu_wrapper {
-  position: fixed;
-  background: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  border: 2px solid white;
-  height: 4rem;
-  color: white;
-}
-
->>>>>>> 746dda707388ddf5c189a1ae79dc84e910c36c90
 .logo {
   background-image: url(./img/LogoMakr-5CXX1n.png);
   background-position: center;
@@ -106,7 +90,6 @@ span {
   margin-bottom: 2rem;
 }
 
-<<<<<<< HEAD
 .menu_wrapper {
   background-color: black;
   border: 1px solid white;
@@ -120,8 +103,6 @@ span {
   height: 4rem;
 }
 
-=======
->>>>>>> 746dda707388ddf5c189a1ae79dc84e910c36c90
 .menue_txt:hover {
   color: #ec5242;
 }
@@ -245,10 +226,6 @@ li {
 
 .contact-list {
   width: 80%;
-<<<<<<< HEAD
-=======
-  margin-left: 45rem;
->>>>>>> 746dda707388ddf5c189a1ae79dc84e910c36c90
 }
 
 button {
