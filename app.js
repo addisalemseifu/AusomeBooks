@@ -34,10 +34,10 @@ class Books {
       const myBooksFinal = document.getElementsByClassName('my_book_back');
       for (let i = 0; i < myBooksFinal.length; i += 1) {
         if (i % 2 !== 0) {
-          myBooksFinal[i].setAttribute('style', 'background-color: rgb(190, 182, 182)');
+          myBooksFinal[i].setAttribute('style', 'background-color: black');
         }
         if (i % 2 === 0) {
-          myBooksFinal[i].setAttribute('style', 'background-color: white');
+          myBooksFinal[i].setAttribute('style', 'background-color: rgb(7, 3, 59)');
         }
       }
     });
