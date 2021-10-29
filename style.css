@@ -5,6 +5,127 @@
   overflow-x: hidden;
 }
 
+.menu_wrapper {
+  position: fixed;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* padding-left: 15%;
+    padding-right: 15%; */
+    border: 2px solid black;
+  }
+
+  .logo {
+    background-image: url(./img/LogoMakr-5CXX1n.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid black;
+  }
+
+  .menu_list_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list {
+    margin-right: 2rem;
+  }
+
+  .menue_txt {
+    text-decoration: none;
+    color: #272a31;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .list_page {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .awsome-title {
+    margin-top: 5rem;
+    border: 2px solid black;
+    height: 3rem;
+  }
+
+  .copy_right {
+    align-self: flex-end;
+    text-align: start;
+    height: 2.5rem;
+    border: 2px solid black;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    width: 90vw;
+    margin-bottom: 2rem;
+  }
+
+  .menue_txt:hover {
+    color: #ec5242;
+  }
+
+  .new_list {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border: 2px solid black;
+  margin-top: 10rem;
+  width: 50%;
+  height: 15rem;
+}
+
+h2 {
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 1.5rem;
+ margin-bottom: 3rem;
+}
+
+#txt {
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+#txtOne {
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 2px;
+  margin-top: -25px;
+  margin-bottom: 1rem;
+}
+
+.add {
+  border: 1px solid black;
+  margin-right: 0;
+  margin-left: auto;
+  width: 3rem;
+  border-radius: 2px;
+  margin-top: -25px;
+}
+
 h1 {
   text-align: center;
   margin-bottom: 0.7rem;
@@ -34,45 +155,47 @@ li {
   border: 2px solid black;
   align-content: center;
   justify-content: center;
-  margin-left: 15rem;
-  margin-right: 15rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   width: auto;
+  margin-bottom: 30rem;
 }
 
-form {
+.book-list:nth-child(1){
+  background-color: grey;
+}
+
+.book-list:nth-child(2){
+  background-color: white;
+}
+
+.contact_page {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 12rem;
+}
+
+.contact-info {
+  margin-top: 10rem;
+}
+
+.contact {
+  width: 80%;
   margin: auto;
-  height: 10rem;
-  margin-top: 2rem;
 }
 
-h2 {
-  margin-bottom: 0.7rem;
-  font-family: monospace;
-  font-weight: 800;
+.contact-list {
+  width: 80%;
+  margin-left: 5rem;
+  margin-top: -2rem;
 }
 
-#txt {
-  border: 1px solid black;
-  width: 100%;
-  border-radius: 2px;
+.con_list {
+  
 }
 
-#txtOne {
-  border: 1px solid black;
-  width: 100%;
-  border-radius: 2px;
-  margin-top: -25px;
-}
 
-.add {
-  border: 1px solid black;
-  margin-right: 0;
-  margin-left: auto;
-  width: 3rem;
-  border-radius: 2px;
-  margin-top: -25px;
-}
+
+
+
+
