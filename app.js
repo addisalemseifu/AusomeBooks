@@ -22,7 +22,7 @@ class Books {
       MyBooks.classList = 'my_book_back';
       Mybutton.setAttribute('id', element.id);
       Mybutton.setAttribute('onclick', `${'Books.remoteAt(this.id)'}`);
-      MyList.innerHTML = `\''${element.booksName}\'' by`;
+      MyList.innerHTML = `'${element.booksName}' by`;
       MyListTwo.innerHTML = element.booksAu;
       Mybutton.innerHTML = 'Remove';
       MyBooks.appendChild(MyList);
@@ -56,7 +56,6 @@ class Books {
 if (bookArray == null) {
   bookArray = [];
 }
-
 addBtn.addEventListener('click', (e) => {
   if (bookInput.value !== '') {
     e.preventDefault();
@@ -66,7 +65,6 @@ addBtn.addEventListener('click', (e) => {
     Books.display();
   }
 });
-
 window.addEventListener('load', () => {
   Books.display();
   Books.remoteAt(id);
