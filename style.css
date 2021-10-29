@@ -41,14 +41,15 @@ span {
 
 .menu_wrapper {
   position: fixed;
-  background: white;
+  background: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid white;
   height: 4rem;
+  color: white;
 }
 
 .logo {
@@ -95,12 +96,6 @@ span {
   margin: auto;
   width: 95%;
   margin-bottom: 2rem;
-}
-
-.menu_wrapper {
-  background-color: black;
-  border: 1px solid white;
-  color: ivory;
 }
 
 .menue_txt:hover {
@@ -227,13 +222,6 @@ li {
 .contact-list {
   width: 80%;
   margin-left: 45rem;
-}
-
-input,
-#txt,
-#txtOne {
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
 }
 
 button {
