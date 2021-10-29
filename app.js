@@ -19,9 +19,10 @@ class Books {
       const MyListTwo = document.createElement('li');
       const Mybutton = document.createElement('button');
       Mybutton.classList = 'remove_btn';
+      MyBooks.classList = 'my_book_back';
       Mybutton.setAttribute('id', element.id);
-      Mybutton.setAttribute('onclick', `${'remoteAt(this.id)'}`);
-      MyList.innerHTML = element.booksName;
+      Mybutton.setAttribute('onclick', `${'Books.remoteAt(this.id)'}`);
+      MyList.innerHTML = `'${element.booksName}' by`;
       MyListTwo.innerHTML = element.booksAu;
       Mybutton.innerHTML = 'Remove';
       MyBooks.appendChild(MyList);
@@ -30,35 +31,41 @@ class Books {
       bookList.appendChild(MyBooks);
       bookInput.value = '';
       bookInputOne.value = '';
+      const myBooksFinal = document.getElementsByClassName('my_book_back');
+      for (let i = 0; i < myBooksFinal.length; i += 1) {
+        if (i % 2 !== 0) {
+          myBooksFinal[i].setAttribute('style', 'background-color: rgb(190, 182, 182);');
+        }
+        if (i % 2 === 0) {
+          myBooksFinal[i].setAttribute('style', 'background-color: white');
+        }
+      }
     });
     localStorage.clear();
     localStorage.setItem('bookArray', JSON.stringify(bookArray));
+  }
+
+  static remoteAt(id) {
+    const element = document.getElementById(id);
+    const index = bookArray.findIndex((prop) => prop.id === id);
+    bookArray.splice(index, 1);
+    element.parentElement.style.display = 'none';
+    Books.display();
   }
 }
 if (bookArray == null) {
   bookArray = [];
 }
-
 addBtn.addEventListener('click', (e) => {
   if (bookInput.value !== '') {
     e.preventDefault();
-    // create li
     const object = new Books(Math.random().toString(16).slice(2),
       bookInput.value, bookInputOne.value);
     bookArray.push(object);
     Books.display();
   }
 });
-
-function remoteAt(id) {
-  const element = document.getElementById(id);
-  const index = bookArray.findIndex((prop) => prop.id === id);
-  bookArray.splice(index, 1);
-  element.parentElement.style.display = 'none';
-  Books.display();
-}
-
 window.addEventListener('load', () => {
   Books.display();
-  remoteAt(id);
+  Books.remoteAt(id);
 });
