@@ -56,7 +56,6 @@ class Books {
 if (bookArray == null) {
   bookArray = [];
 }
-
 addBtn.addEventListener('click', (e) => {
   if (bookInput.value !== '') {
     e.preventDefault();
@@ -66,11 +65,11 @@ addBtn.addEventListener('click', (e) => {
     Books.display();
   }
 });
-
 window.addEventListener('load', () => {
   Books.display();
   Books.remoteAt(id);
 });
+
 const now = new Date();
 const dateTime = document.querySelectorAll('span');
 for (let i = 0; i < dateTime.length; i += 1) {
