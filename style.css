@@ -5,82 +5,112 @@
   overflow-x: hidden;
 }
 
+span {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: flex-end;
+  width: 95%;
+  height: 4rem;
+  float: right;
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.menue_txt {
+  border-right: 2px solid black;
+  height: 80%;
+  padding-right: 2rem;
+  text-decoration: none;
+  color: #272a31;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+#cont_txt {
+  border-right: 2px solid white;
+  height: 80%;
+  padding-right: 1rem;
+}
+
+#nav_span {
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
 .menu_wrapper {
   position: fixed;
-    background: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    /* padding-left: 15%;
-    padding-right: 15%; */
-    border: 2px solid black;
-  }
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 2px solid black;
+  height: 4rem;
+}
 
-  .logo {
-    background-image: url(./img/LogoMakr-5CXX1n.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 2px solid black;
-  }
+.logo {
+  background-image: url(./img/LogoMakr-5CXX1n.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 3rem;
+  font-size: large;
+}
 
-  .menu_list_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+.menu_list_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-  .list {
-    margin-right: 2rem;
-  }
+.list {
+  margin-right: 2rem;
+  font-size: large;
+}
 
-  .menue_txt {
-    text-decoration: none;
-    color: #272a31;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 0.8rem;
-    font-weight: bold;
-  }
+.list_page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  .list_page {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-  }
+.awsome-title {
+  margin-top: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+}
 
-  .awsome-title {
-    margin-top: 5rem;
-    border: 2px solid black;
-    height: 3rem;
-  }
+.copy_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  height: 2.5rem;
+  border: 2px solid black;
+  align-content: center;
+  margin: auto;
+  width: 95%;
+  margin-bottom: 2rem;
+}
 
-  .copy_right {
-    align-self: flex-end;
-    text-align: start;
-    height: 2.5rem;
-    border: 2px solid black;
-    align-content: center;
-    justify-content: center;
-    margin: auto;
-    width: 90vw;
-    margin-bottom: 2rem;
-  }
+.menue_txt:hover {
+  color: #ec5242;
+}
 
-  .menue_txt:hover {
-    color: #ec5242;
-  }
+.menue_txt::selection {
+  color: #ae42ec;
+}
 
-  .new_list {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid black;
+.new_list {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 form {
@@ -89,17 +119,15 @@ form {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  border: 2px solid black;
   margin-top: 10rem;
   width: 50%;
-  height: 15rem;
 }
 
 h2 {
   font-family: monospace;
   font-weight: 800;
-  font-size: 1.5rem;
- margin-bottom: 3rem;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
 }
 
 #txt {
@@ -107,6 +135,7 @@ h2 {
   width: 100%;
   border-radius: 2px;
   margin-bottom: 1rem;
+  height: 2rem;
 }
 
 #txtOne {
@@ -115,15 +144,17 @@ h2 {
   border-radius: 2px;
   margin-top: -25px;
   margin-bottom: 1rem;
+  height: 2rem;
 }
 
 .add {
   border: 1px solid black;
   margin-right: 0;
   margin-left: auto;
-  width: 3rem;
   border-radius: 2px;
   margin-top: -25px;
+  height: 2rem;
+  width: 4rem;
 }
 
 h1 {
@@ -135,7 +166,6 @@ h1 {
 
 ul {
   display: inline-block;
-  border-bottom: 1px solid rgb(190, 182, 182);
 }
 
 li {
@@ -158,44 +188,27 @@ li {
   margin-left: 1rem;
   margin-right: 1rem;
   width: auto;
-  margin-bottom: 30rem;
-}
-
-.book-list:nth-child(1){
-  background-color: grey;
-}
-
-.book-list:nth-child(2){
-  background-color: white;
 }
 
 .contact_page {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-info {
   margin-top: 10rem;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .contact {
-  width: 80%;
-  margin: auto;
+  margin-bottom: 3rem;
 }
 
 .contact-list {
   width: 80%;
-  margin-left: 5rem;
-  margin-top: -2rem;
+  margin-left: 45rem;
 }
-
-.con_list {
-  
-}
-
-
-
-
-
-
