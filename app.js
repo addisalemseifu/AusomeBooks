@@ -22,7 +22,7 @@ class Books {
       MyBooks.classList = 'my_book_back';
       Mybutton.setAttribute('id', element.id);
       Mybutton.setAttribute('onclick', `${'Books.remoteAt(this.id)'}`);
-      MyList.innerHTML = `\''${element.booksName}\'' by`;
+      MyList.innerHTML = `''${element.booksName}'' by`;
       MyListTwo.innerHTML = element.booksAu;
       Mybutton.innerHTML = 'Remove';
       MyBooks.appendChild(MyList);
@@ -32,15 +32,14 @@ class Books {
       bookInput.value = '';
       bookInputOne.value = '';
       const myBooksFinal = document.getElementsByClassName('my_book_back');
-      for (let i = 0; i < myBooksFinal.length; i++){
-        if(i%2 != 0) {
-          myBooksFinal[i].setAttribute('style', 'background-color: grey');
+      for (let i = 0; i < myBooksFinal.length; i += 1) {
+        if (i % 2 !== 0) {
+          myBooksFinal[i].setAttribute('style', 'background-color: rgb(190, 182, 182)');
         }
-        if(i%2 == 0) {
+        if (i % 2 === 0) {
           myBooksFinal[i].setAttribute('style', 'background-color: white');
         }
       }
-      
     });
     localStorage.clear();
     localStorage.setItem('bookArray', JSON.stringify(bookArray));
@@ -72,3 +71,9 @@ window.addEventListener('load', () => {
   Books.display();
   Books.remoteAt(id);
 });
+const now = new Date();
+const dateTime = document.querySelectorAll('span');
+for (let i = 0; i < dateTime.length; i += 1) {
+  dateTime[i].innerHTML = now.toString();
+}
+dateTime.innerHTML = now.toString();
