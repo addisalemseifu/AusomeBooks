@@ -8,17 +8,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Awesome books</h1>
-    <div class="book-list">
+    <nav class="nav_wrapper">
+        <div class="menu_wrapper">
+            <div class="logo">Awesome Books</div>
+            <ul class="menu_list_wrapper">
+                <li class="list"><a class="menue_txt" href="Add a new book">List</a></li>
+                <li class="list"><a class="menue_txt" href="">Add new</a></li>
+                <li class="list"><a class="menue_txt" href="#Contact information">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="awsome-title">Awesome books</h1>
+    <div class="list_page">
+        
+        <div class="book-list">
 
 
+        </div>
+        <div class="copy_right">Copyright</div>
+    </div>  
+    
+    <div class="new_list">
+        <form>
+            <h2>Add a new book</h2>
+            <input type="text" name="text" id="txt" placeholder="Title" required><br><br>
+            <input type="text" name="text" id="txtOne" placeholder="Author" required><br><br>
+            <button type="submit" class="add">Add</button>
+        </form>
+        <div class="copy_right">Copyright</div>
     </div>
-    <form>
-        <h2>Add a new book</h2>
-        <input type="text" name="text" id="txt" placeholder="Title" required><br><br>
-        <input type="text" name="text" id="txtOne" placeholder="Author" required><br><br>
-        <button type="submit" class="add">Add</button>
-    </form>
+
+    <div class="contact_page">
+        <h1 class="contact-info">Contact information</h1>
+        <p class="contact">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos temporibus suscipit labore, perferendis numquam culpa veritatis tempora unde, magnam sequi repellendus repellat illum eos accusamus. Similique commodi aliquid est ea?</p>
+        <ul class="contact-list">
+            <li class="con_list">* Our e-mail : addisalemseifu@gmail.com</li><br>
+            <li class="con_list">* Our phone no : +2519 10528787</li><br>
+            <li class="con_list">* Our Address : Bole 22, AddisAbaba, Ethiopia</li>
+        </ul>
+        <div class="copy_right">Copyright</div>
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>
