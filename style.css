@@ -39,19 +39,6 @@ span {
   margin-right: 2rem;
 }
 
-.menu_wrapper {
-  position: fixed;
-  background: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  border: 2px solid white;
-  height: 4rem;
-  color: white;
-}
-
 .logo {
   background-image: url(./img/LogoMakr-5CXX1n.png);
   background-position: center;
@@ -71,6 +58,11 @@ span {
 .list {
   margin-right: 2rem;
   font-size: large;
+}
+
+.con_list {
+  display: block;
+  margin-left: 14rem;
 }
 
 .list_page {
@@ -100,6 +92,19 @@ span {
   margin: auto;
   width: 95%;
   margin-bottom: 2rem;
+}
+
+.menu_wrapper {
+  background-color: black;
+  border: 1px solid white;
+  color: ivory;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
 }
 
 .menue_txt:hover {
@@ -225,7 +230,6 @@ li {
 
 .contact-list {
   width: 80%;
-  margin-left: 45rem;
 }
 
 button {
