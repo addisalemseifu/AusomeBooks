@@ -22,7 +22,7 @@ class Books {
       MyBooks.classList = 'my_book_back';
       Mybutton.setAttribute('id', element.id);
       Mybutton.setAttribute('onclick', `${'Books.remoteAt(this.id)'}`);
-      MyList.innerHTML = `'${element.booksName}' by`;
+      MyList.innerHTML = `''${element.booksName}'' by`;
       MyListTwo.innerHTML = element.booksAu;
       Mybutton.innerHTML = 'Remove';
       MyBooks.appendChild(MyList);
@@ -34,10 +34,10 @@ class Books {
       const myBooksFinal = document.getElementsByClassName('my_book_back');
       for (let i = 0; i < myBooksFinal.length; i += 1) {
         if (i % 2 !== 0) {
-          myBooksFinal[i].setAttribute('style', 'background-color: rgb(190, 182, 182);');
+          myBooksFinal[i].setAttribute('style', 'background-color: black');
         }
         if (i % 2 === 0) {
-          myBooksFinal[i].setAttribute('style', 'background-color: white');
+          myBooksFinal[i].setAttribute('style', 'background-color: rgb(7, 3, 59)');
         }
       }
     });
@@ -68,4 +68,33 @@ addBtn.addEventListener('click', (e) => {
 window.addEventListener('load', () => {
   Books.display();
   Books.remoteAt(id);
+});
+
+const now = new Date();
+const dateTime = document.querySelectorAll('span');
+for (let i = 0; i < dateTime.length; i += 1) {
+  dateTime[i].innerHTML = now.toString();
+}
+dateTime.innerHTML = now.toString();
+
+const list = document.querySelector('#list');
+const addNew = document.querySelector('#add');
+const Contact = document.querySelector('#cont_txt');
+const listPage = document.querySelector('.list_page');
+const addNewPage = document.querySelector('.new_list');
+const ContactPage = document.querySelector('.contact_page');
+list.addEventListener('click', () => {
+  listPage.setAttribute('style', 'display: flex');
+  addNewPage.setAttribute('style', 'display: none');
+  ContactPage.setAttribute('style', 'display: none');
+});
+addNew.addEventListener('click', () => {
+  addNewPage.setAttribute('style', 'display: flex');
+  listPage.setAttribute('style', 'display: none');
+  ContactPage.setAttribute('style', 'display: none');
+});
+Contact.addEventListener('click', () => {
+  ContactPage.setAttribute('style', 'display: flex');
+  addNewPage.setAttribute('style', 'display: none');
+  listPage.setAttribute('style', 'display: none');
 });
