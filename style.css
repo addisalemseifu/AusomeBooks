@@ -75,7 +75,6 @@ span {
   display: none;
 }
 
-
 .awsome-title {
   margin-top: 3rem;
   height: 3rem;
@@ -127,7 +126,6 @@ span {
 .new_list.display {
   display: none;
 }
-
 
 form {
   display: flex;
@@ -224,7 +222,7 @@ li {
   align-items: center;
 }
 
-.contact_page.active{
+.contact_page.active {
   display: none;
 }
 
