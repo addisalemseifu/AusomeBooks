@@ -71,6 +71,11 @@ span {
   flex-direction: column;
 }
 
+.list_page.a {
+  display: none;
+}
+
+
 .awsome-title {
   margin-top: 3rem;
   height: 3rem;
@@ -118,6 +123,11 @@ span {
   justify-content: space-between;
   align-items: center;
 }
+
+.new_list.display {
+  display: none;
+}
+
 
 form {
   display: flex;
@@ -212,6 +222,10 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.contact_page.active{
+  display: none;
 }
 
 .contact-info {
