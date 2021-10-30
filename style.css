@@ -127,7 +127,6 @@ span {
   display: none;
 }
 
-
 form {
   display: flex;
   flex-direction: column;
@@ -223,7 +222,7 @@ li {
   align-items: center;
 }
 
-.contact_page.active{
+.contact_page.active {
   display: none;
 }
 
@@ -246,3 +245,4 @@ button {
   color: white;
   border-radius: 4px;
 }
+

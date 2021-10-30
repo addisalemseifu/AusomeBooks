@@ -98,17 +98,3 @@ Contact.addEventListener('click', () => {
   addNewPage.setAttribute('style', 'display: none');
   listPage.setAttribute('style', 'display: none');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
