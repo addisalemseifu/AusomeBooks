@@ -123,6 +123,11 @@ span {
   align-items: center;
 }
 
+.new_list.display {
+  display: none;
+}
+
+
 form {
   display: flex;
   flex-direction: column;
@@ -216,6 +221,10 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.contact_page.active{
+  display: none;
 }
 
 .contact-info {
