@@ -83,8 +83,6 @@ const Contact = document.querySelector('#cont_txt');
 const listPage = document.querySelector('.list_page');
 const addNewPage = document.querySelector('.new_list');
 const ContactPage = document.querySelector('.contact_page');
-addNewPage.setAttribute('style', 'display: none');
-ContactPage.setAttribute('style', 'display: none');
 list.addEventListener('click', () => {
   listPage.setAttribute('style', 'display: flex');
   addNewPage.setAttribute('style', 'display: none');
